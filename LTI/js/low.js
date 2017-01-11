@@ -56,11 +56,11 @@ counties = {
         img.setAttribute('src', client.img);
         img.setAttribute('class', 'img-circle county-img');
 
-        var h3 = document.createElement('h3');
-        h3.innerHTML = client.name;
+        var h4 = document.createElement('h4');
+        h4.innerHTML = client.name;
 
         div.appendChild(img);
-        div.appendChild(h3);
+        div.appendChild(h4);
 
         return div;
     }
