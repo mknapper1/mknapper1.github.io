@@ -5,16 +5,39 @@ clients = [
         , url: 'http://lowtaxinfo.com/allencounty'
     }
     , //Add additional counties between here!!!
-//     {name: 'Allen County', img: 'images/counties/allen.jpg', url:'http://lowtaxinfo.com/allencounty'},
-//     {name: 'Allen County', img: 'images/counties/allen.jpg', url:'http://lowtaxinfo.com/allencounty'},
-//     {name: 'Allen County', img: 'images/counties/allen.jpg', url:'http://lowtaxinfo.com/allencounty'},
-    //And here!
+    {
+        name: 'Sample County'
+        , img: 'images/counties/sample/sample1.jpg'
+        , url: 'https://www.flickr.com/photos/nostri-imago/3129881412/'
+    }
+    , {
+        name: 'Sample County'
+        , img: 'images/counties/sample/sample2.jpg'
+        , url: 'https://www.flickr.com/photos/bcgrote/3440470275/'
+    }
+    , {
+        name: 'Sample County'
+        , img: 'images/counties/sample/sample3.jpg'
+        , url: 'https://www.flickr.com/photos/ipeguy/3381673794/'
+    }
+    , {
+        name: 'Sample County'
+        , img: 'images/counties/sample/sample4.jpg'
+        , url: 'https://flic.kr/p/9Lothq'
+    }
+    , {
+        name: 'Sample County'
+        , img: 'images/counties/sample/sample5.jpg'
+        , url: 'https://www.flickr.com/photos/bcgrote/3440468013/'
+    }
+    , //And here!
     {
         name: 'More Coming Soon'
         , img: 'images/counties/more.jpg'
         , url: null
     }
-, ]
+
+    , ]
 
 
 counties = {
