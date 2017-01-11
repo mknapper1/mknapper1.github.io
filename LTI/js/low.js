@@ -23,7 +23,7 @@ counties = {
         if (client.url != null) {
             div.setAttribute('class', 'col-sm-3 col-sm-pull-1 col-sm-offset-1 pointer');
             div.onclick = function () {
-                location.replace(client.url);
+                window.location.href = client.url;
             };
         } else {
             div.setAttribute('class', 'col-sm-3 col-sm-pull-1 col-sm-offset-1');
