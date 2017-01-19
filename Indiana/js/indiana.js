@@ -23,9 +23,18 @@ $(function () {
     $('.IN_County').click(function() {
         if(document.getElementById('click').checked) {
             var id = $(this).prop('id');
-            $('.IN_County').each(function() {
-                $(this).prop('style','fill: #E8E8E8');
-            })
+            
+            
+            var counties = document.getElementsByClassName('IN_County');
+            for (var i = 0; i < counties.length; i++) {
+                var county = counties[i];  
+                county.setAttribute('style', 'fill: #E8E8E8');
+            }
+            
+            
+//            $('.IN_County').each(function() {
+//                $(this).prop('style','fill: #E8E8E8');
+//            })
             //$('.IN_County').prop('style','fill: #E8E8E8');
             $('#County_Name').html('You clicked on ' + id.substring(3).replace('_',' ') + ' county');
             document.getElementById(id).setAttribute('style', 'fill: #007f7e');
