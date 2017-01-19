@@ -7,11 +7,14 @@ function getSvg(src, parentID) {
 }
 
 $(function () {
+    var iphone = false;
+    
     getSvg('Indiana.svg', 'SVGContainter');
     
     if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
         document.getElementById('mouseover').disabled = true;
         document.getElementById('click').checked = true;
+        iphone = true;
     }else {
         $('#mobile_only').hide();
 
@@ -21,10 +24,9 @@ $(function () {
         if(document.getElementById('click').checked) {
             var id = $(this).prop('id');
             $('.IN_County').each(function() {
-                var sub_id = $(this).prop('id');
-                document.getElementById(id).setAttribute('style', 'fill: #E8E8E8');
+                $(this).prop('style','fill: #E8E8E8');
             })
-            $('.IN_County').prop('style','fill: #E8E8E8');
+            //$('.IN_County').prop('style','fill: #E8E8E8');
             $('#County_Name').html('You clicked on ' + id.substring(3).replace('_',' ') + ' county');
             document.getElementById(id).setAttribute('style', 'fill: #007f7e');
 
