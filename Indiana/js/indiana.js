@@ -12,12 +12,18 @@ $(function () {
     if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
         document.getElementById('mouseover').disabled = true;
         document.getElementById('click').checked = true;
+                alert('here!');
+
         $('.IN_County').prop('style','fill: green !important');
         document.querySelector('.IN_County').setAttribute('fill','red');
         document.getElementById('IN_Hamilton').setAttribute('fill','yellow');
         document.getElementById('IN_Henry').setAttribute('style', 'fill: blue');
     }else {
         $('#mobile_only').hide();
+        $('.IN_County').prop('style','fill: green !important');
+        document.querySelector('.IN_County').setAttribute('fill','red');
+        document.getElementById('IN_Hamilton').setAttribute('fill','yellow');
+        document.getElementById('IN_Henry').setAttribute('style', 'fill: blue');
     }
 
     $('.IN_County').click(function() {
