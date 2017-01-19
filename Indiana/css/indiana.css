@@ -1,0 +1,10 @@
+#SVGContainter {
+width: 100%;
+}
+#SVGContainter>svg {
+width: 100%;
+    height: 100%;
+    align-content: center;
+    
+}
+

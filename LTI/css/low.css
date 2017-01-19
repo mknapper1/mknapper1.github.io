@@ -167,3 +167,11 @@ body {
     opacity: .98;
 }
 
+.nav>li {
+    font-size: 1.5em;
+}
+
+.navbar-brand {
+    font-size: 2em;
+}
+
