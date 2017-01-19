@@ -12,6 +12,7 @@ $(function () {
     if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
         document.getElementById('mouseover').disabled = true;
         document.getElementById('click').checked = true;
+        $('.IN_County').prop('style','fill: purple');
         
     }else {
         $('#mobile_only').hide();
