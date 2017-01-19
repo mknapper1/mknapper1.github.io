@@ -20,10 +20,7 @@ $(function () {
         document.getElementById('IN_Henry').setAttribute('style', 'fill: blue');
     }else {
         $('#mobile_only').hide();
-        $('.IN_County').prop('style','fill: green !important');
-        document.querySelector('.IN_County').setAttribute('fill','red');
-        document.getElementById('IN_Hamilton').setAttribute('fill','yellow');
-        document.getElementById('IN_Henry').setAttribute('style', 'fill: blue');
+
     }
 
     $('.IN_County').click(function() {
@@ -32,6 +29,8 @@ $(function () {
             $('.IN_County').prop('style','fill: #E8E8E8');
             $('#County_Name').html('You clicked on ' + id.substring(3).replace('_',' ') + ' county');
             $(this).prop('style','fill: #007f7e');
+            document.getElementById(id).setAttribute('style', 'fill: #007f7e');
+
         }
     });
     $('.IN_County').mouseover(function() {
@@ -40,6 +39,7 @@ $(function () {
             $('.IN_County').prop('style','fill: #E8E8E8');
             $('#County_Name').html('You hovered over ' + id.substring(3).replace('_',' ') + ' county');
             $(this).prop('style','fill: #007f7e');
+            document.getElementById(id).setAttribute('style', 'fill: #007f7e');
         }
     });
     
