@@ -11,3 +11,7 @@ width: 100%;
 .IN_County {
     cursor: pointer;
 }
+
+#County_name {
+    min-height: 80px;
+}
