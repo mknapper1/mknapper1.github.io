@@ -12,12 +12,6 @@ $(function () {
     if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
         document.getElementById('mouseover').disabled = true;
         document.getElementById('click').checked = true;
-                alert('here!');
-
-        $('.IN_County').prop('style','fill: green !important');
-        document.querySelector('.IN_County').setAttribute('fill','red');
-        document.getElementById('IN_Hamilton').setAttribute('fill','yellow');
-        document.getElementById('IN_Henry').setAttribute('style', 'fill: blue');
     }else {
         $('#mobile_only').hide();
 
@@ -26,9 +20,12 @@ $(function () {
     $('.IN_County').click(function() {
         if(document.getElementById('click').checked) {
             var id = $(this).prop('id');
+            $('.IN_County').each(function() {
+                var sub_id = $(this).prop('id');
+                document.getElementById(id).setAttribute('style', 'fill: #E8E8E8');
+            })
             $('.IN_County').prop('style','fill: #E8E8E8');
             $('#County_Name').html('You clicked on ' + id.substring(3).replace('_',' ') + ' county');
-            $(this).prop('style','fill: #007f7e');
             document.getElementById(id).setAttribute('style', 'fill: #007f7e');
 
         }
@@ -38,7 +35,6 @@ $(function () {
             var id = $(this).prop('id');
             $('.IN_County').prop('style','fill: #E8E8E8');
             $('#County_Name').html('You hovered over ' + id.substring(3).replace('_',' ') + ' county');
-            $(this).prop('style','fill: #007f7e');
             document.getElementById(id).setAttribute('style', 'fill: #007f7e');
         }
     });
