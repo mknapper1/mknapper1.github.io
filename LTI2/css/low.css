@@ -1,6 +1,14 @@
 body {
     font-family: 'PT Sans', sans-serif;
-    padding-top: 51px;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Hammersmith One', sans-serif;
+    
+/*    padding-top: 51px;*/
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
 }
 
 .left {
@@ -32,51 +40,27 @@ body {
     width: 100%;
 }
 
-#home>h2 {
+/*
+#title {
     letter-spacing: 2px;
     position: absolute;
-    top: 10px;
-    left: 50%;
+    top: 100px;
+    left: 5%;
     width: 40%;
-    color: rgba(255, 255, 255, .92);
+    color: rgba(255, 255, 255, 1.0);
     text-align: center;
-    font-size: 60px;
+    font-size: 90px;
     font-weight: 700;
     text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
-
-@media screen and (max-width: 1400px) {
-    #home>h2 {
-        letter-spacing: 2px;
-        bottom: 10px;
-        left: 55%;
-        width: 40%;
-        text-align: center;
-        font-size: 40px;
-        font-weight: 700;
-    }
-    #home>h2>span {
-        position: absolute;
-        left: 0;
-        bottom: 0px;
-        width: 100%;
-    }
+#title>#subtitle {
+    font-size: 55px;
+    width: 80%;
+    margin: auto;
 }
+*/
 
-@media screen and (max-width: 650px) {
-    #home>h2 {
-        display: none;
-    }
-    #home-mobile {
-        display: block;
-        background-color: #f8f8f8;
-        border-color: #e7e7e7;
-        text-align: center;
-        vertical-align: top;
-        padding: 15px;
-        font-size: 1.8em;
-    }
-}
+
 
 .data-row:nth-child(even) {
     background-color: #f8f8f8;
@@ -150,7 +134,9 @@ body {
 */
 
 .county-img {
-    width: 90%;
+    width: 60%;
+    opacity: .9;
+    border: 5px solid rgba(255,255,255,0.25);
 }
 
 @media screen and (max-width: 1024px) {
@@ -182,4 +168,35 @@ body {
 
 .IN_County:hover{
     fill: green;
+}
+
+.gis {
+    background-image: url(../images/banner5.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#clients_container {
+    margin: 40px 0 40px 0;
+}
+
+#title, #subtitle {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#title {
+    margin-top: 50px;
+    font-size: 6em;
+}
+
+#subtitle {
+    margin-top: -10px;
+    font-size: 4em;
+}
+
+#svgcontainer>svg {
+    height: 500px;
 }

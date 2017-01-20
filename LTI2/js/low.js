@@ -15,21 +15,7 @@ clients = [
         , img: 'images/counties/sample/sample2.jpg'
         , url: 'https://www.flickr.com/photos/bcgrote/3440470275/'
     }
-    , {
-        name: 'Sample County'
-        , img: 'images/counties/sample/sample3.jpg'
-        , url: 'https://www.flickr.com/photos/ipeguy/3381673794/'
-    }
-    , {
-        name: 'Sample County'
-        , img: 'images/counties/sample/sample4.jpg'
-        , url: 'https://flic.kr/p/9Lothq'
-    }
-    , {
-        name: 'Sample County'
-        , img: 'images/counties/sample/sample5.jpg'
-        , url: 'https://www.flickr.com/photos/bcgrote/3440468013/'
-    }
+    
     , //And here!
     {
         name: 'More Coming Soon'
@@ -44,19 +30,19 @@ counties = {
     create: function (client) {
         var div = document.createElement('div');
         if (client.url != null) {
-            div.setAttribute('class', 'col-sm-3 col-sm-pull-1 col-sm-offset-1 pointer');
+            div.setAttribute('class', 'col-sm-2 col-sm-offset-1 pointer');
             div.onclick = function () {
                 window.location.href = client.url;
             };
         } else {
-            div.setAttribute('class', 'col-sm-3 col-sm-pull-1 col-sm-offset-1');
+            div.setAttribute('class', 'col-sm-2 col-sm-offset-1');
         }
 
         var img = document.createElement('img');
         img.setAttribute('src', client.img);
         img.setAttribute('class', 'img-circle county-img');
 
-        var h4 = document.createElement('h4');
+        var h4 = document.createElement('h3');
         h4.innerHTML = client.name;
 
         div.appendChild(img);
