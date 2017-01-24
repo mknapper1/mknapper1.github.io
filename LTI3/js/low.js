@@ -87,7 +87,7 @@ map = {
                 valueChanged = true;
             }
             if (valueChanged) {
-                var id = 'IN_' + $(this).val().capitalize();
+                var id = 'IN_' + $(this).val().toLowerCase().capitalize();
                 var counties = document.getElementsByClassName('IN_County');
                 for (var i = 0; i < counties.length; i++) {
                     var county = counties[i];
