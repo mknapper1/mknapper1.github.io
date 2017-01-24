@@ -161,15 +161,6 @@ body {
     font-size: 2em;
 }
 
-
-#IN_Porter {
-    fill: red;
-}
-
-.IN_County:hover{
-    fill: green;
-}
-
 .gis {
     background-image: url(../images/banner5.png);
     background-repeat: no-repeat;

@@ -1,10 +1,15 @@
+String.prototype.capitalize = function () {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
 clients = [
     {
         name: 'Allen County'
         , img: 'images/counties/allen.jpg'
         , url: 'http://lowtaxinfo.com/allencounty'
     }
-    , //Add additional counties between here!!!
+    , 
+    //    Add additional counties between here!!! vvvvvvvvvvvvvvv
     {
         name: 'Sample County'
         , img: 'images/counties/sample/sample1.jpg'
@@ -15,16 +20,14 @@ clients = [
         , img: 'images/counties/sample/sample2.jpg'
         , url: 'https://www.flickr.com/photos/bcgrote/3440470275/'
     }
-    
-    , //And here!
+
+    , //     And here!  ^^^^^^^^^^^^^^^
     {
         name: 'More Coming Soon'
         , img: 'images/counties/more.jpg'
         , url: null
     }
-
     , ]
-
 
 counties = {
     create: function (client) {
@@ -61,15 +64,51 @@ counties = {
     }
 }
 
-function getSvg(src, parentID) {
-    xhr = new XMLHttpRequest;
-    xhr.open("GET", src, false);
-    xhr.overrideMimeType('image/svg+xml');
-    xhr.send('');
-    document.getElementById(parentID).appendChild(xhr.responseXML.documentElement);
+map = {
+    init: function () {
+        map.getSvg('images/Indiana100.svg', 'svgcontainer');
+        $('.IN_County').click(function () {
+            var id = $(this).prop('id');
+            var counties = document.getElementsByClassName('IN_County');
+            for (var i = 0; i < counties.length; i++) {
+                var county = counties[i];
+                county.setAttribute('style', 'fill: #E8E8E8');
+            }
+            document.getElementById(id).setAttribute('style', 'fill: #007f7e');
+            $('#county').val(id.substring(3).replace('_', ' '));
+
+        });
+        $('#county').on('input propertychange', function (e) {
+            var valueChanged = false;
+
+            if (e.type == 'propertychange') {
+                valueChanged = e.originalEvent.propertyName == 'value';
+            } else {
+                valueChanged = true;
+            }
+            if (valueChanged) {
+                var id = 'IN_' + $(this).val().capitalize();
+                var counties = document.getElementsByClassName('IN_County');
+                for (var i = 0; i < counties.length; i++) {
+                    var county = counties[i];
+                    county.setAttribute('style', 'fill: #E8E8E8');
+                }
+                document.getElementById(id).setAttribute('style', 'fill: #007f7e');
+            }
+        })
+
+
+    }
+    , getSvg: function (src, parentID) {
+        xhr = new XMLHttpRequest;
+        xhr.open("GET", src, false);
+        xhr.overrideMimeType('image/svg+xml');
+        xhr.send('');
+        document.getElementById(parentID).appendChild(xhr.responseXML.documentElement);
+    }
 }
 
 $(function () {
     counties.init.all();
-    getSvg('images/Indiana.svg', 'svgcontainer');
+    map.init();
 });
