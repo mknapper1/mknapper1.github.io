@@ -43,7 +43,7 @@ counties = {
 
         var img = document.createElement('img');
         img.setAttribute('src', client.img);
-        img.setAttribute('class', 'img-circle county-img');
+        img.setAttribute('class', 'img-circle county-img fade-in');
 
         var h4 = document.createElement('h3');
         h4.innerHTML = client.name;
