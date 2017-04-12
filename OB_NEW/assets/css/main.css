@@ -3129,7 +3129,7 @@ button:disabled,
     -ms-transition: -ms-transform 0.5s ease;
     transition: transform 0.5s ease;
     -webkit-overflow-scrolling: touch;
-    background: #21b2a6;
+    background: #177dac;
     color: #ffffff;
     height: 100%;
     max-width: 80%;
