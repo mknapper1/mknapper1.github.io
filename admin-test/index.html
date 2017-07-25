@@ -28,41 +28,48 @@
     <style>
 
     .col-btn {
-        padding: 30px; 
-        margin: -10px 40px -10px 40px;
-                text-align: center;
+        padding: 5px; 
+        margin: 0px 40px 10px 40px;
+        text-align: center;
 
     }
 
     .num-btn {
-        font-size: 2.1em; 
+        font-size: 1.8em; 
         font-weight: 1000;
-        line-height: 1em;
+        line-height: 0.9em;
         width: 100px;
-        height: 100px;
+        height: 90px;
         text-align: center;
         border-width: 3px;
     }
 
-    .num-btn .chars {
-        font-size: 0.7em;
+    .num-btn:active {
+        background-color: purple;
+    }
+
+    .num-btn:hover {
+        background: transparent;
+    }
+
+    .num-btn>.chars {
+        font-size: .7em;
+        font-weight: 200;
         text-align: center;
     }
 
-    .btn-del {
-
-    }
-
     .center-div {
-        margin: 50px 220px;
+        margin: 50px 120px;
         width: 80%;
     }
 
     .pass-input {
-    width: 390px;
-    margin-left: 70px;
+    width: 365px;
+    height: 80px;
+    margin-left: 45px;
     margin-bottom: 50px;
     padding: 20px;
+    padding-top: -10px;
     background: transparent;
     border: 3px solid;
     border-radius: 3px;
@@ -70,13 +77,11 @@
     -webkit-transition: border-color 0.25s;
     transition: border-color 0.25s;
     line-height: 0px;
-    font-size: 4em;
+    font-size: 4.5em;
     text-align: center;
-}
-
+    letter-spacing: 0.3em;
 
     </style>
-
 </head>
 
 <body id="page-top">
@@ -96,68 +101,63 @@
                 <li class="nav-item">
                     <div id="weather"></div>
                 </li>
-
-
             </ul>
-
         </div>
     </nav>
 
     <div class="content-wrapper py-3 bg-inverse">
         <div class="container center-div">
             <div class="row">
-                        <input class="pass-input" type="password">
+                <input id='pass' class="pass-input" type="password">
             </div>
             <div class="row">
                 <div class="col-1 col-btn">
-                    <button type="button" class="num-btn btn btn-outline-secondary btn-lg">1<br><span class="chars">&nbsp;</span></button>
+                    <button type="button" onclick="numpad(1)" class="num-btn btn btn-outline-secondary btn-lg">1<br><span class="chars">&nbsp;</span></button>
                 </div>
                 <div class="col-1 col-btn">
-                    <button type="button" class="num-btn btn btn-outline-secondary btn-lg">2<br><span class="chars">abc</span></button>
+                    <button type="button" onclick="numpad(2)" class="num-btn btn btn-outline-secondary btn-lg">2<br><span class="chars">abc</span></button>
                 </div>
                 <div class="col-1 col-btn">
-                    <button type="button" class="num-btn btn btn-outline-secondary btn-lg">3<br><span class="chars">def</span></button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-1 col-btn">
-                    <button type="button" class="num-btn btn btn-outline-secondary btn-lg">4<br><span class="chars">ghi</span></button>
-                </div>
-                <div class="col-1 col-btn">
-                    <button type="button" class="num-btn btn btn-outline-secondary btn-lg">5<br><span class="chars">jkl</span></button>
-                </div>
-                <div class="col-1 col-btn">
-                    <button type="button" class="num-btn btn btn-outline-secondary btn-lg">6<br><span class="chars">mnp</span></button>
+                    <button type="button" onclick="numpad(3)" class="num-btn btn btn-outline-secondary btn-lg">3<br><span class="chars">def</span></button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-1 col-btn">
-                    <button type="button" class="num-btn btn btn-outline-secondary btn-lg">7<br><span class="chars">pqrs</span></button>
+                    <button type="button" onclick="numpad(4)" class="num-btn btn btn-outline-secondary btn-lg">4<br><span class="chars">ghi</span></button>
                 </div>
                 <div class="col-1 col-btn">
-                    <button type="button" class="num-btn btn btn-outline-secondary btn-lg">8<br><span class="chars">tuv</span></button>
+                    <button type="button" onclick="numpad(5)" class="num-btn btn btn-outline-secondary btn-lg">5<br><span class="chars">jkl</span></button>
                 </div>
                 <div class="col-1 col-btn">
-                    <button type="button" class="num-btn btn btn-outline-secondary btn-lg">9<br><span class="chars">wxyz</span></button>
+                    <button type="button" onclick="numpad(6)" class="num-btn btn btn-outline-secondary btn-lg">6<br><span class="chars">mnp</span></button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-1 col-btn">
-                    <button type="button" class="num-btn btn btn-outline-secondary btn-lg"><span class='btn-del'>del</span></button>                    
+                    <button type="button" onclick="numpad(7)" class="num-btn btn btn-outline-secondary btn-lg">7<br><span class="chars">pqrs</span></button>
                 </div>
                 <div class="col-1 col-btn">
-                    <button type="button" class="num-btn btn btn-outline-secondary btn-lg">0<br><span class="chars">&nbsp;</span></button>
+                    <button type="button" onclick="numpad(8)" class="num-btn btn btn-outline-secondary btn-lg">8<br><span class="chars">tuv</span></button>
                 </div>
                 <div class="col-1 col-btn">
-                    <button type="button" class="num-btn btn btn-outline-secondary btn-lg"><span class='btn-del'>clr</span></button>                    
+                    <button type="button" onclick="numpad(9)" class="num-btn btn btn-outline-secondary btn-lg">9<br><span class="chars">wxyz</span></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 col-btn">
+                    <button type="button" onclick="numpad('del')" class="num-btn btn btn-outline-secondary btn-lg"><span class='btn-del'>del</span></button>                    
+                </div>
+                <div class="col-1 col-btn">
+                    <button type="button" onclick="numpad(0)" class="num-btn btn btn-outline-secondary btn-lg">0<br><span class="chars">&nbsp;</span></button>
+                </div>
+                <div class="col-1 col-btn">
+                    <button type="button" onclick="numpad('clr')" class="num-btn btn btn-outline-secondary btn-lg"><span class='btn-del'>clr</span></button>                    
                 </div>
 
             </div>
         </div>
 
     </div>
-
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/tether/tether.min.js"></script>

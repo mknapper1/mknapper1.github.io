@@ -150,3 +150,17 @@ var myLineChart = new Chart(ctx, {
         }
     }
 });
+
+
+function numpad(char) {
+    var val = char.toString()
+    var input = document.getElementById('pass');
+    if (val === "del") {
+        input.value = input.value.slice(0,-1);
+    } else if (val === "clr") {
+        input.value = '';
+    } else {
+        input.value = input.value + val;
+    }
+    $('.num-btn.active').removeClass('active');
+}
