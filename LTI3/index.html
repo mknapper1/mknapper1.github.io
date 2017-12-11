@@ -104,7 +104,7 @@
                     </div>
                     <div class="form-group">
                         <label for="email" class="left">Email address:</label>
-                        <input name="email" type="email" class="form-control" id="email">
+                        <input name="_replyto" type="email" class="form-control" id="email">
                     </div>
                     <div class="form-group">
                         <label for="county" class="left">County:</label>
@@ -120,6 +120,9 @@
                         <br>
                         <button type="submit" class="btn btn-default right">Send</button>
                     </div>
+                    <input type="hidden" name="_next" value="https://google.com" />
+                    <input type="hidden" name="_subject" value="New LTI Lead" />
+                    <input type="hidden" name="_format" value="plain" />
                 </form>
             </div>
 
