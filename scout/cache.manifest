@@ -1,9 +1,7 @@
 CACHE MANIFEST
-# rev 2
-FALLBACK:
-index.html
-
+# rev 3
 CACHE:
+index.html
 cache/bootstrap.min.css
 cache/jquery.min.js
 cache/bootstrap.min.js
