@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="cache.manifest">
 <head>
     <title>Scout</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <link rel="stylesheet" href="cache/bootstrap.min.css">
+    <script src="cache/jquery.min.js"></script>
+    <script src="cache/bootstrap.min.js"></script>
+    <script src="cache/js.cookie.min.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-light bg-light">
@@ -19,109 +18,237 @@
 
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">New</a>
-            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Local</a>
-            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">All</a>
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Match</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Pit</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Upload</a>
         </div>
     </nav>
-    <div class="tab-content mt-3" id="nav-tabContent">
+    <div class="tab-content mt-3 mb-3" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
             <form>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Email address</label>
-                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select name="matthew" class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect2">Example multiple select</label>
-                    <select multiple class="form-control" id="exampleFormControlSelect2">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <input type="submit" value="save!">
+                <p><input name="scout_type" maxlength="200" id="id_scout_type_match" type="text" value="match" hidden></p>
+                <p><label for="id_robot_match">Robot:</label> <select name="robot" required="" id="id_robot_match">
+                    <option value="" selected="">---------</option>
+
+                    <option value="1">216 | More RoboDawgs</option>
+
+                    <option value="2">244 | RoboDawgs 3D</option>
+
+                    <option value="3">288 | The RoboDawgs</option>
+
+                    <option value="4">858 | Demons</option>
+
+                    <option value="5">904 | D Cubed</option>
+
+                    <option value="6">1918 | NC GEARS</option>
+
+                    <option value="7">2474 | Excel</option>
+
+                    <option value="8">2767 | Stryke Force</option>
+
+                    <option value="9">2771 | Code Red Robotics the Stray Dogs</option>
+
+                    <option value="10">3234 | Red Arrows</option>
+
+                    <option value="11">3458 | Code Blue</option>
+
+                    <option value="12">3875 | Red Storm Robotics</option>
+
+                    <option value="13">4004 | M.A.R.S. Rovers</option>
+
+                    <option value="14">4325 | RoboRangers</option>
+
+                    <option value="15">4384 | Benzene Bots</option>
+
+                    <option value="16">4409 | Ground Zero</option>
+
+                    <option value="17">4482 | ID Robotics</option>
+
+                    <option value="18">4855 | Ramageddon</option>
+
+                    <option value="19">4967 | That ONE Team-OurNextEngineers</option>
+
+                    <option value="20">5056 | MegaHurtz Robotics</option>
+
+                    <option value="21">5069 | The Iron Giants</option>
+
+                    <option value="22">5194 | Gobles Voltage</option>
+
+                    <option value="23">5256 | Atomic Vikings</option>
+
+                    <option value="24">5316 | The Architects</option>
+
+                    <option value="25">5470 | The Cowpunchers</option>
+
+                    <option value="26">5473 | Team Spitfire.</option>
+
+                    <option value="27">5567 | Code Red Robotics</option>
+
+                    <option value="28">5664 | Big Red Robotics</option>
+
+                    <option value="29">5963 | CA Frost High School</option>
+
+                    <option value="30">6002 | ZooBOTix</option>
+
+                    <option value="31">6065 | Titanium Dragons</option>
+
+                    <option value="32">6090 | Wayland Wildcats</option>
+
+                    <option value="33">6114 | Do the Thing</option>
+
+                    <option value="34">6428 | STEMINEERS</option>
+
+                    <option value="35">6600 | Baldwin Panthers</option>
+
+                    <option value="36">7073 | Ottawa Hills High School</option>
+
+                    <option value="37">7234 | Rebel Robotics</option>
+
+                    <option value="38">7248 | Tactical Hams</option>
+
+                    <option value="39">7256 | Irish Robotics</option>
+
+                    <option value="40">7289 | Blue Eagles</option>
+
+                </select></p>
+                <p><label for="id_match_number">Match number:</label> <input name="match_number" maxlength="200" required="" id="id_match_number" type="text"></p>
+                <p><label for="id_auton">Auton:</label> <select name="auton" id="id_auton">
+                    <option value="None" selected="">None</option>
+
+                    <option value="Baseline">Baseline</option>
+
+                    <option value="CenterSwitch">Center Switch</option>
+
+                    <option value="SideSwitch">Side Switch</option>
+
+                    <option value="Scale">Scale</option>
+
+                </select></p>
+                <p><label for="id_auto_cubes">Auto cubes:</label> <input name="auto_cubes" value="0" required="" id="id_auto_cubes" type="number"></p>
+                <p><label for="id_auto_notes">Auto notes:</label> <input name="auto_notes" maxlength="200" id="id_auto_notes" type="text"></p>
+                <p><label for="id_own_switch_cubes">Own switch cubes:</label> <input name="own_switch_cubes" value="0" required="" id="id_own_switch_cubes" type="number"></p>
+                <p><label for="id_other_switch_cubes">Other switch cubes:</label> <input name="other_switch_cubes" value="0" required="" id="id_other_switch_cubes" type="number"></p>
+                <p><label for="id_scale_cubes">Scale cubes:</label> <input name="scale_cubes" value="0" required="" id="id_scale_cubes" type="number"></p>
+                <p><label for="id_vault_cubes">Vault cubes:</label> <input name="vault_cubes" value="0" required="" id="id_vault_cubes" type="number"></p>
+                <p><label for="id_tele_notes">Tele notes:</label> <input name="tele_notes" maxlength="200" id="id_tele_notes" type="text"></p>
+                <p><label for="id_can_climb">Can climb:</label> <input name="can_climb" id="id_can_climb" type="checkbox"></p>
+                <p><label for="id_buddy_climb">Buddy climb:</label> <input name="buddy_climb" id="id_buddy_climb" type="checkbox"></p>
+                <p><label for="id_robot_speed">Robot speed:</label> <input name="robot_speed" value="0" required="" id="id_robot_speed" type="number"></p>
+                <p><label for="id_robot_cube_intake">Robot cube intake:</label> <input name="robot_cube_intake" value="0" required="" id="id_robot_cube_intake" type="number"></p>
+                <p><label for="id_robot_cube_holding">Robot cube holding:</label> <input name="robot_cube_holding" value="0" required="" id="id_robot_cube_holding" type="number"></p>
+                <p><label for="id_robot_cube_placing">Robot cube placing:</label> <input name="robot_cube_placing" value="0" required="" id="id_robot_cube_placing" type="number"></p>
+                <p><label for="id_other_notes">Other notes:</label> <input name="other_notes" maxlength="200" id="id_other_notes" type="text"></p>
+                <p><label for="id_scouter_name">Scouter name:</label> <input name="scouter_name" maxlength="200" id="id_scouter_name" type="text"></p>
+
+                <input value="submit" type="submit">
             </form>
         </div>
         <div class="tab-pane fade mt-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                </tbody>
-            </table>
-            <button>Save All</button>
+            <form>
+                <p><input name="scout_type" maxlength="200" id="id_scout_type_pit" type="text" value="match" hidden></p>
+                <p><label for="id_robot_pit">Robot:</label> <select name="robot" required="" id="id_robot_pit">
+                    <option value="" selected="">---------</option>
+
+                    <option value="1">216 | More RoboDawgs</option>
+
+                    <option value="2">244 | RoboDawgs 3D</option>
+
+                    <option value="3">288 | The RoboDawgs</option>
+
+                    <option value="4">858 | Demons</option>
+
+                    <option value="5">904 | D Cubed</option>
+
+                    <option value="6">1918 | NC GEARS</option>
+
+                    <option value="7">2474 | Excel</option>
+
+                    <option value="8">2767 | Stryke Force</option>
+
+                    <option value="9">2771 | Code Red Robotics the Stray Dogs</option>
+
+                    <option value="10">3234 | Red Arrows</option>
+
+                    <option value="11">3458 | Code Blue</option>
+
+                    <option value="12">3875 | Red Storm Robotics</option>
+
+                    <option value="13">4004 | M.A.R.S. Rovers</option>
+
+                    <option value="14">4325 | RoboRangers</option>
+
+                    <option value="15">4384 | Benzene Bots</option>
+
+                    <option value="16">4409 | Ground Zero</option>
+
+                    <option value="17">4482 | ID Robotics</option>
+
+                    <option value="18">4855 | Ramageddon</option>
+
+                    <option value="19">4967 | That ONE Team-OurNextEngineers</option>
+
+                    <option value="20">5056 | MegaHurtz Robotics</option>
+
+                    <option value="21">5069 | The Iron Giants</option>
+
+                    <option value="22">5194 | Gobles Voltage</option>
+
+                    <option value="23">5256 | Atomic Vikings</option>
+
+                    <option value="24">5316 | The Architects</option>
+
+                    <option value="25">5470 | The Cowpunchers</option>
+
+                    <option value="26">5473 | Team Spitfire.</option>
+
+                    <option value="27">5567 | Code Red Robotics</option>
+
+                    <option value="28">5664 | Big Red Robotics</option>
+
+                    <option value="29">5963 | CA Frost High School</option>
+
+                    <option value="30">6002 | ZooBOTix</option>
+
+                    <option value="31">6065 | Titanium Dragons</option>
+
+                    <option value="32">6090 | Wayland Wildcats</option>
+
+                    <option value="33">6114 | Do the Thing</option>
+
+                    <option value="34">6428 | STEMINEERS</option>
+
+                    <option value="35">6600 | Baldwin Panthers</option>
+
+                    <option value="36">7073 | Ottawa Hills High School</option>
+
+                    <option value="37">7234 | Rebel Robotics</option>
+
+                    <option value="38">7248 | Tactical Hams</option>
+
+                    <option value="39">7256 | Irish Robotics</option>
+
+                    <option value="40">7289 | Blue Eagles</option>
+
+                </select></p>
+                <p><label for="id_line_auto">Line auto:</label> <input name="line_auto" id="id_line_auto" type="checkbox"></p>
+                <p><label for="id_switch_auto">Switch auto:</label> <input name="switch_auto" id="id_switch_auto" type="checkbox"></p>
+                <p><label for="id_scale_auto">Scale auto:</label> <input name="scale_auto" id="id_scale_auto" type="checkbox"></p>
+                <p><label for="id_autonomous">Autonomous:</label> <input name="autonomous" value="0" required="" id="id_autonomous" type="number"></p>
+                <p><label for="id_climbing">Climbing:</label> <input name="climbing" value="0" required="" id="id_climbing" type="number"></p>
+                <p><label for="id_switch">Switch:</label> <input name="switch" value="0" required="" id="id_switch" type="number"></p>
+                <p><label for="id_scale">Scale:</label> <input name="scale" value="0" required="" id="id_scale" type="number"></p>
+                <p><label for="id_vault">Vault:</label> <input name="vault" value="0" required="" id="id_vault" type="number"></p>
+                <p><label for="id_overall_impression">Overall impression:</label> <input name="overall_impression" value="0" required="" id="id_overall_impression" type="number"></p>
+                <p><label for="id_notes">Notes:</label> <textarea name="notes" cols="40" rows="10" id="id_notes"></textarea></p>
+                <input value="submit" type="submit">
+            </form>
         </div>
         <div class="tab-pane fade mt-3" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                </tbody>
-            </table>
+            <p id="error_message"></p>
+            <label for="password">Submit Password</label>
+            <input id="password" type="text">
+            <button id="upload" onclick="upload_local_data()">Upload Local Data</button>
+            <button id="delete" onclick="delete_local_data()">Delete Local Data</button>
         </div>
     </div>
 
@@ -129,9 +256,34 @@
 
 </body>
 <script>
+
+    function get_password() {
+        return $('#password').val();
+    }
+
+    function delete_local_data() {
+        if (get_password() === 'askMatt4Delete') {
+            Cookies.set('Robots', data, { expires: -1 });
+            $('#error_message').text('Data Deleted');
+        }
+        else {
+            $('#error_message').text('Wrong Password');
+        }
+    }
+
+    function upload_local_data() {
+        if (get_password() === '4409') {
+            save_all();
+            $('#error_message').text('Data Uploaded');
+        }
+        else {
+            $('#error_message').text('Wrong Password');
+        }
+    }
+
     var data;
 
-    function getData() {
+    function get_data() {
         var data = Cookies.get('Robots');
         if (data === undefined || data.length === 0) {
             data = [];
@@ -141,33 +293,66 @@
         return data;
     }
 
-    function addData(new_data) {
-        var data = getData();
+    function add_data(new_data) {
+        var data = get_data();
         data.push(new_data);
-        setData(data);
-        updateLocal(data);
+        set_data(data);
+        // updateLocal(data);
     }
 
-    function setData(data) {
+    function set_data(data) {
         Cookies.set('Robots', data, { expires: 365 })
     }
 
-    function updateLocal(data) {
-        if (data !== undefined && data.length > 0) {
-            data.forEach(function(item) {
-                console.log(item)
-            })
-        }
+    // function updateLocal(data) {
+    //     if (data !== undefined && data.length > 0) {
+    //         data.forEach(function(item) {
+    //             console.log(JSON.stringify(item));
+    //         })
+    //     }
+    // }
+
+    function save_all() {
+        data = get_data();
+        data.forEach(function(scout) {
+            save_one(JSON.stringify(scout));
+            // console.log(JSON.stringify(item));
+        })
+    }
+
+    function save_one(scout) {
+
+        $.ajax({
+            type:"POST",
+            url:"http://127.0.0.1:8080/scout/add/external/",
+            data: scout,
+            datatype: "json",
+            success: function(){
+                console.log('Success!');
+            },
+            fail: function() {
+                console.log('Fail!');
+            },
+            always: function() {
+                console.log('Always');
+            }
+        });
+
+
+        $.post('http://127.0.0.1:8080/scout/add/external/', {'scout': scout}, function (data) {
+            if (data !== '') {
+                console.log(data);
+            }
+        });
+
     }
 
     $( "form" ).submit(function( event ) {
-        addData($( this ).serializeArray());
+        add_data($( this ).serializeArray());
         event.preventDefault();
     });
 
-    $(function() {
-        updateLocal(getData());
-    });
+
 
 </script>
 </html>
