@@ -1,5 +1,7 @@
 $(function() {
     $("#gridContainer").dxDataGrid({
+    	columnAutoWidth: true,
+    	wordWrapEnabled: true,
         dataSource: {
             store: {
                 type: "odata",

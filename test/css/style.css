@@ -2,3 +2,9 @@
     padding-top: 0;
     padding-bottom: 0;
 }
+
+.container {
+	width: 100%;
+	max-width: 1020px !important;
+	margin: 0 auto;
+}
