@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-  <Say>Welcome to SignalWire!</Say>
+  <Say>Thanks for calling Oddular!</Say>
+  <Dial>269-340-7144</Dial>
 </Response>
