@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-  <Say>Thanks for calling Oddular!</Say>
+  <Say voice="alice">Thanks for calling Odd-you-lar</Say>
   <Dial>269-340-7144</Dial>
 </Response>
