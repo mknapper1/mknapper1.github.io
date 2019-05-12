@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
   <Say voice="woman">Thanks for calling Odd-you-ler</Say>
-  <Dial>269-340-7144</Dial>
+  <Dial callerId="Oddular">269-340-7144</Dial>
   <Dial>269-849-5466</Dial>
+  <Say voice="woman">Hmm, no ones answers. I'll text someone for you.</Say>
 </Response>
